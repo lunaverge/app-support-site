@@ -1,0 +1,121 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Simulated Call Support</title>
+  <style>
+    :root {
+      color-scheme: light dark;
+      --bg: #f7f9fb;
+      --panel: #ffffff;
+      --text: #17202a;
+      --muted: #5d6b7a;
+      --line: #d8e0e8;
+      --accent: #0f766e;
+    }
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg: #101418;
+        --panel: #171d23;
+        --text: #f4f7fa;
+        --muted: #aab6c2;
+        --line: #2d3843;
+        --accent: #2dd4bf;
+      }
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+    }
+    main {
+      width: min(920px, calc(100% - 32px));
+      margin: 0 auto;
+      padding: 48px 0;
+    }
+    header, section {
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      padding: 28px;
+      margin-bottom: 18px;
+    }
+    h1, h2, h3 { line-height: 1.2; }
+    h1 { margin: 0 0 10px; font-size: clamp(2rem, 5vw, 3rem); }
+    h2 { margin: 0 0 12px; font-size: 1.25rem; }
+    h3 { margin: 18px 0 4px; font-size: 1rem; }
+    p, li { color: var(--muted); }
+    a { color: var(--accent); font-weight: 700; }
+    ul { padding-left: 22px; }
+    .meta { margin: 0; color: var(--muted); }
+  </style>
+</head>
+<body>
+  <main>
+    <header>
+      <h1>模拟电话 · 技术支持</h1>
+      <p class="meta">娱乐用途的模拟来电工具 / An entertainment app for simulating incoming calls.</p>
+    </header>
+
+    <!-- 中文 -->
+    <section>
+      <h2>关于模拟电话</h2>
+      <p>「模拟电话」帮你在需要时模拟一通来电——比如想礼貌地结束一场聚会或会议。所有来电均为本机模拟，不涉及任何真实通话。</p>
+    </section>
+
+    <section>
+      <h2>联系我们</h2>
+      <p>
+        使用中遇到任何问题或有建议，欢迎邮件联系，我们会尽快回复：
+        <a href="mailto:huangxiu6@gmail.com">huangxiu6@gmail.com</a>
+      </p>
+    </section>
+
+    <section>
+      <h2>常见问题</h2>
+      <h3>来电不显示 / 没有反应？</h3>
+      <p>请确认已在「设置 → 通知」中允许本 App 的通知权限；首次使用建议先添加一位“来电方”。</p>
+      <h3>定时来电到点没响？</h3>
+      <p>iOS 在后台会限制应用运行，到点时会以通知形式提醒，点击通知即可进入来电界面。请确保已允许通知权限。</p>
+      <h3>贴脸熄屏不生效？</h3>
+      <p>通话中靠近听筒上方的距离传感器即可熄屏，移开自动亮起，与真实通话一致。</p>
+      <h3>如何切换语言 / 深浅色？</h3>
+      <p>在「设置 → 外观」中可切换主题（跟随系统/浅色/深色）与语言（跟随系统/中文/English）。</p>
+      <h3>我的数据安全吗？</h3>
+      <p>所有数据仅保存在你的设备本地，不上传、不收集。详见 <a href="./privacy.html">隐私政策</a>。</p>
+    </section>
+
+    <!-- English -->
+    <section>
+      <h2>About Simulated Call</h2>
+      <p>“Simulated Call” lets you trigger a fake incoming call whenever you need one — for example, to politely exit a gathering or meeting. Every call is simulated on your device and involves no real telephony.</p>
+    </section>
+
+    <section>
+      <h2>Contact Us</h2>
+      <p>
+        For any questions or suggestions, email us and we'll get back to you as soon as possible:
+        <a href="mailto:huangxiu6@gmail.com">huangxiu6@gmail.com</a>
+      </p>
+    </section>
+
+    <section>
+      <h2>FAQ</h2>
+      <h3>The call doesn't appear / nothing happens?</h3>
+      <p>Make sure notifications are allowed under Settings → Notifications. On first use, add a “caller” first.</p>
+      <h3>A scheduled call didn't ring on time?</h3>
+      <p>iOS limits background activity, so at the scheduled time you'll get a notification — tap it to open the call screen. Please keep notifications enabled.</p>
+      <h3>Proximity screen-off isn't working?</h3>
+      <p>During a call, cover the proximity sensor near the earpiece to turn the screen off; move away to wake it — just like a real call.</p>
+      <h3>How do I switch language / appearance?</h3>
+      <p>Under Settings → Appearance you can switch theme (System/Light/Dark) and language (System/中文/English).</p>
+      <h3>Is my data safe?</h3>
+      <p>All data stays on your device and is never uploaded or collected. See our <a href="./privacy.html">Privacy Policy</a> for details.</p>
+    </section>
+  </main>
+</body>
+</html>
