@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Simulated Call Support</title>
+  <title>CallMate Support</title>
   <style>
     :root {
       color-scheme: light dark;
@@ -12,7 +12,7 @@
       --text: #17202a;
       --muted: #5d6b7a;
       --line: #d8e0e8;
-      --accent: #0f766e;
+      --accent: #6c4dcc;
     }
     @media (prefers-color-scheme: dark) {
       :root {
@@ -21,7 +21,7 @@
         --text: #f4f7fa;
         --muted: #aab6c2;
         --line: #2d3843;
-        --accent: #2dd4bf;
+        --accent: #c8b7ff;
       }
     }
     * { box-sizing: border-box; }
@@ -57,42 +57,14 @@
 <body>
   <main>
     <header>
-      <h1>模拟电话 · 技术支持</h1>
-      <p class="meta">娱乐用途的模拟来电工具 / An entertainment app for simulating incoming calls.</p>
+      <h1>CallMate Support</h1>
+      <p class="meta">An on-device app for simulated calls and personal reminders.</p>
     </header>
-
-    <!-- 中文 -->
-    <section>
-      <h2>关于模拟电话</h2>
-      <p>「模拟电话」帮你在需要时模拟一通来电——比如想礼貌地结束一场聚会或会议。所有来电均为本机模拟，不涉及任何真实通话。</p>
-    </section>
-
-    <section>
-      <h2>联系我们</h2>
-      <p>
-        使用中遇到任何问题或有建议，欢迎邮件联系，我们会尽快回复：
-        <a href="mailto:huangxiu6@gmail.com">huangxiu6@gmail.com</a>
-      </p>
-    </section>
-
-    <section>
-      <h2>常见问题</h2>
-      <h3>来电不显示 / 没有反应？</h3>
-      <p>请确认已在「设置 → 通知」中允许本 App 的通知权限；首次使用建议先添加一位“来电方”。</p>
-      <h3>定时来电到点没响？</h3>
-      <p>iOS 在后台会限制应用运行，到点时会以通知形式提醒，点击通知即可进入来电界面。请确保已允许通知权限。</p>
-      <h3>贴脸熄屏不生效？</h3>
-      <p>通话中靠近听筒上方的距离传感器即可熄屏，移开自动亮起，与真实通话一致。</p>
-      <h3>如何切换语言 / 深浅色？</h3>
-      <p>在「设置 → 外观」中可切换主题（跟随系统/浅色/深色）与语言（跟随系统/中文/English）。</p>
-      <h3>我的数据安全吗？</h3>
-      <p>所有数据仅保存在你的设备本地，不上传、不收集。详见 <a href="./privacy.html">隐私政策</a>。</p>
-    </section>
 
     <!-- English -->
     <section>
-      <h2>About Simulated Call</h2>
-      <p>“Simulated Call” lets you trigger a fake incoming call whenever you need one — for example, to politely exit a gathering or meeting. Every call is simulated on your device and involves no real telephony.</p>
+      <h2>About CallMate</h2>
+      <p>CallMate lets you trigger a fake incoming call whenever you need one — for example, to politely exit a gathering or meeting. Every call is simulated on your device and involves no real telephony.</p>
     </section>
 
     <section>
@@ -106,16 +78,45 @@
     <section>
       <h2>FAQ</h2>
       <h3>The call doesn't appear / nothing happens?</h3>
-      <p>Make sure notifications are allowed under Settings → Notifications. On first use, add a “caller” first.</p>
+      <p>Add and select a caller first, then tap Start simulated call. CallMate 1.0.1 uses its own incoming card, clearly labeled as a simulation, rather than the system Phone interface. Answer opens the simulated session timer; Finish simulation returns to Home.</p>
       <h3>A scheduled call didn't ring on time?</h3>
-      <p>iOS limits background activity, so at the scheduled time you'll get a notification — tap it to open the call screen. Please keep notifications enabled.</p>
-      <h3>Proximity screen-off isn't working?</h3>
-      <p>During a call, cover the proximity sensor near the earpiece to turn the screen off; move away to wake it — just like a real call.</p>
+      <p>Keep CallMate open to show the incoming card automatically at the end of a countdown. In the background or while locked, a local notification reminds you instead; tap it to open CallMate and start the simulation. Allow notifications, and check Focus settings if a reminder is silent or delayed.</p>
+      <h3>Why is the simulated call silent?</h3>
+      <p>The original cue plays only while the incoming card is visible in the foreground. It respects silent mode and system volume. It stops when you answer, decline, the ring duration ends, or you background the app. CallMate does not use the microphone, CallKit, VoIP, or a persistent background audio service.</p>
       <h3>How do I switch language / appearance?</h3>
-      <p>Under Settings → Appearance you can switch theme (System/Light/Dark) and language (System/中文/English).</p>
+      <p>In Settings, choose System, Light, or Dark appearance. Languages include English, French, Japanese, Korean, Simplified Chinese, and Traditional Chinese, with an option to follow your system language.</p>
       <h3>Is my data safe?</h3>
       <p>All data stays on your device and is never uploaded or collected. See our <a href="./privacy.html">Privacy Policy</a> for details.</p>
     </section>
+
+    <!-- 中文 -->
+    <section lang="zh-Hans">
+      <h2>关于 CallMate</h2>
+      <p>CallMate帮你在需要时模拟一通来电——比如想礼貌地结束一场聚会或会议。所有来电均为本机模拟，不涉及任何真实通话。</p>
+    </section>
+
+    <section lang="zh-Hans">
+      <h2>联系我们</h2>
+      <p>
+        使用中遇到任何问题或有建议，欢迎邮件联系，我们会尽快回复：
+        <a href="mailto:huangxiu6@gmail.com">huangxiu6@gmail.com</a>
+      </p>
+    </section>
+
+    <section lang="zh-Hans">
+      <h2>常见问题</h2>
+      <h3>来电不显示 / 没有反应？</h3>
+      <p>请先添加并选择来电方，再点按「开始模拟来电」。CallMate 1.0.1 使用自己的原创来电卡片，并明确标注模拟用途。接听后可查看模拟会话计时，结束后返回首页。</p>
+      <h3>定时来电到点没响？</h3>
+      <p>保持 CallMate 在前台，倒计时结束时会自动显示来电卡片。App 在后台或设备锁屏时改为本地通知提醒，点按通知打开 App 后开始模拟。请允许通知；专注模式和系统通知设置可能使提醒静音或延迟。</p>
+      <h3>为什么模拟来电没有声音？</h3>
+      <p>原创提示音仅在来电卡片处于前台时播放，尊重静音模式和系统音量。接听、拒接、等待超时或进入后台时会停止。CallMate 不使用麦克风、CallKit、VoIP 或持续后台音频服务。</p>
+      <h3>如何切换语言 / 深浅色？</h3>
+      <p>在设置中可选择跟随系统、浅色或深色主题。支持英语、法语、日语、韩语、简体中文、繁体中文，也可跟随系统语言。</p>
+      <h3>我的数据安全吗？</h3>
+      <p>所有数据仅保存在你的设备本地，不上传、不收集。详见 <a href="./privacy.html">隐私政策</a>。</p>
+    </section>
+
   </main>
 </body>
 </html>
